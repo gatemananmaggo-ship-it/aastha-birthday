@@ -1,0 +1,1503 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>For Aastha ♡ — a little universe by Manan</title>
+  <meta name="description" content="A birthday universe made for Aastha by Manan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Parisienne&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --lav: #ded2f1;
+      --lav2: #b69bd7;
+      --lav3: #8067a9;
+      --ink: #30273a;
+      --ivory: #fff9f0;
+      --blush: #f4c7d5;
+      --rose: #a95b79;
+      --gold: #c9a96b
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: Manrope, Arial, sans-serif;
+      background: radial-gradient(circle at 12% 7%, #fff 0, transparent 28%), radial-gradient(circle at 90% 15%, #eadffc 0, transparent 34%), linear-gradient(135deg, #efe8fa, #e7dbf6 48%, #fbf5ee);
+      min-height: 100vh;
+      overflow-x: hidden
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit
+    }
+
+    .nav {
+      position: fixed;
+      z-index: 100;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 4px;
+      padding: 7px;
+      background: rgba(255, 255, 255, .58);
+      border: 1px solid rgba(255, 255, 255, .8);
+      backdrop-filter: blur(17px);
+      border-radius: 999px;
+      box-shadow: 0 14px 50px rgba(85, 62, 112, .13)
+    }
+
+    .nav a,
+    .nav button {
+      border: 0;
+      background: transparent;
+      padding: 10px 13px;
+      border-radius: 999px;
+      color: #5d4e71;
+      font: 700 11px Manrope;
+      cursor: pointer
+    }
+
+    .nav a:hover,
+    .nav button:hover {
+      background: rgba(126, 103, 169, .12)
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 100px 20px 50px;
+      position: relative
+    }
+
+    .hero-card {
+      width: min(1120px, 96vw);
+      min-height: 700px;
+      padding: 48px;
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 28px;
+      align-items: center;
+      border-radius: 40px;
+      background: rgba(255, 251, 247, .6);
+      border: 1px solid rgba(255, 255, 255, .8);
+      box-shadow: 0 36px 110px rgba(81, 57, 107, .17);
+      backdrop-filter: blur(18px)
+    }
+
+    .kicker,
+    .tag {
+      font: 500 11px DM Mono;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: #846e9d
+    }
+
+    .title {
+      font: 600 clamp(60px, 9vw, 120px)/.78 "Cormorant Garamond", serif;
+      letter-spacing: -.05em;
+      margin: 16px 0 10px
+    }
+
+    .script {
+      font: 400 clamp(31px, 4vw, 56px) Parisienne, cursive;
+      color: var(--rose)
+    }
+
+    .sub {
+      max-width: 610px;
+      margin: 25px 0 0;
+      font-size: 16px;
+      line-height: 1.8;
+      color: #62576d
+    }
+
+    .cta {
+      display: inline-flex;
+      gap: 9px;
+      align-items: center;
+      margin-top: 25px;
+      padding: 14px 19px;
+      background: linear-gradient(135deg, #896fb7, #b97799);
+      color: #fff;
+      border-radius: 999px;
+      font-weight: 800;
+      box-shadow: 0 12px 32px rgba(116, 84, 151, .24)
+    }
+
+    .tiny {
+      font-size: 11px;
+      color: #7a6d82;
+      margin-top: 10px
+    }
+
+    .avatar-box {
+      min-height: 540px;
+      display: grid;
+      place-items: center;
+      position: relative
+    }
+
+    .halo {
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      position: absolute;
+      background: radial-gradient(circle, rgba(255, 255, 255, .94), rgba(207, 188, 237, .38) 50%, transparent 71%);
+      animation: breath 5s ease-in-out infinite
+    }
+
+    @keyframes breath {
+      50% {
+        transform: scale(1.05);
+        opacity: .8
+      }
+    }
+
+    #avatar {
+      width: min(460px, 88vw);
+      height: 520px;
+      position: relative;
+      z-index: 2
+    }
+
+    .rose-orbit {
+      position: absolute;
+      inset: 0;
+      pointer-events: none
+    }
+
+    .petal {
+      position: absolute;
+      width: 12px;
+      height: 18px;
+      border-radius: 80% 20% 80% 20%;
+      background: linear-gradient(145deg, #f2b8cc, #b86686);
+      opacity: .45;
+      animation: fall 10s linear infinite
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translate3d(0, -10vh, 0) rotate(0);
+        opacity: 0
+      }
+
+      10% {
+        opacity: .45
+      }
+
+      100% {
+        transform: translate3d(80px, 115vh, 0) rotate(480deg);
+        opacity: 0
+      }
+    }
+
+    .section {
+      padding: 110px 18px
+    }
+
+    .wrap {
+      width: min(1000px, 94vw);
+      margin: auto
+    }
+
+    .h2 {
+      font: 600 clamp(45px, 6vw, 82px)/.92 "Cormorant Garamond", serif;
+      margin: 8px 0 30px
+    }
+
+    .terminal {
+      background: #20182b;
+      color: #f0e6f6;
+      border-radius: 24px;
+      padding: 23px 24px;
+      box-shadow: 0 28px 70px rgba(44, 26, 57, .2);
+      font: 14px/1.95 DM Mono;
+      border: 1px solid rgba(255, 255, 255, .1)
+    }
+
+    .term-top {
+      display: flex;
+      gap: 7px;
+      margin-bottom: 15px
+    }
+
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #927aa4
+    }
+
+    .prompt {
+      color: #cdb8f1
+    }
+
+    .pink {
+      color: #efb9cd
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 8px;
+      height: 15px;
+      background: #dcc3ff;
+      vertical-align: -2px;
+      animation: blink 1s steps(2, end) infinite
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0
+      }
+    }
+
+    .letter {
+      background: linear-gradient(#fff8e9, #f7e9ca);
+      border: 1px solid rgba(176, 129, 71, .25);
+      padding: 68px clamp(25px, 8vw, 92px);
+      position: relative;
+      box-shadow: 0 34px 85px rgba(95, 65, 36, .16);
+      overflow: hidden
+    }
+
+    .letter:before {
+      content: "";
+      position: absolute;
+      inset: 16px;
+      border: 1px solid rgba(165, 119, 68, .22);
+      pointer-events: none
+    }
+
+    .letter:after {
+      content: "";
+      position: absolute;
+      right: 38px;
+      top: 38px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 50% 40%, rgba(166, 82, 111, .28), rgba(166, 82, 111, .08) 55%, transparent 57%);
+      transform: rotate(-8deg)
+    }
+
+    .letter .date {
+      text-align: center;
+      color: #83694f;
+      font: 11px DM Mono;
+      letter-spacing: .15em
+    }
+
+    .letter h3 {
+      text-align: center;
+      font: 600 43px/1.1 "Cormorant Garamond", serif;
+      margin: 14px 0 8px
+    }
+
+    .letter p {
+      font: 400 21px/1.75 "Cormorant Garamond", serif;
+      color: #594837;
+      margin: 22px 0
+    }
+
+    .signature {
+      text-align: right;
+      font: 400 42px Parisienne, cursive;
+      color: #965b6f
+    }
+
+    .footer {
+      padding: 65px 20px 90px;
+      text-align: center;
+      color: #716579
+    }
+
+    .footer .heart {
+      font-size: 48px;
+      animation: beat 1.7s ease-in-out infinite
+    }
+
+    @keyframes beat {
+      30% {
+        transform: scale(1.12)
+      }
+
+      50% {
+        transform: scale(1)
+      }
+    }
+
+    @media(max-width:820px) {
+      .hero-card {
+        grid-template-columns: 1fr;
+        padding: 28px
+      }
+
+      .avatar-box {
+        min-height: 430px
+      }
+
+      .nav {
+        max-width: 95vw;
+        overflow: auto;
+        white-space: nowrap
+      }
+
+      .nav a,
+      .nav button {
+        padding: 9px 10px
+      }
+    }
+    /* =========================================================
+   CINEMATIC BIRTHDAY INTRO
+   ========================================================= */
+
+#birthdayIntro {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 38%,
+            rgba(231, 210, 246, 0.34),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 50% 70%,
+            rgba(235, 183, 205, 0.15),
+            transparent 35%
+        ),
+        linear-gradient(
+            145deg,
+            #17121f,
+            #22182d 42%,
+            #30213a
+        );
+
+    transition:
+        opacity 1.5s ease,
+        visibility 1.5s ease;
+}
+
+#birthdayIntro.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.intro-content {
+    width: min(900px, 94vw);
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.intro-kicker {
+    color: rgba(240, 224, 249, 0.72);
+
+    font-family: "DM Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+
+    margin-bottom: 30px;
+
+    opacity: 0;
+    animation: introTextIn 1.3s ease forwards;
+    animation-delay: 0.5s;
+}
+
+.intro-title {
+    margin-top: 18px;
+
+    color: #fff8fc;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(44px, 7vw, 82px);
+    font-weight: 500;
+
+    letter-spacing: -0.045em;
+
+    opacity: 0;
+    transform: translateY(16px);
+
+    animation:
+        introTextIn 1.3s ease forwards;
+    animation-delay: 3s;
+}
+
+.intro-title span {
+    color: #efb9cd;
+    font-style: italic;
+}
+
+.intro-subtitle {
+    margin-top: 10px;
+
+    color: rgba(255, 242, 249, 0.72);
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(18px, 2vw, 24px);
+
+    opacity: 0;
+    animation: introTextIn 1.2s ease forwards;
+    animation-delay: 3.4s;
+}
+
+/* =========================================================
+   BOUQUET
+   ========================================================= */
+
+.bouquet-stage {
+    width: 420px;
+    height: 355px;
+
+    position: relative;
+
+    margin: 0 auto;
+
+    filter:
+        drop-shadow(0 25px 45px rgba(0,0,0,.35))
+        drop-shadow(0 0 60px rgba(205,163,225,.16));
+
+    transform-origin: center bottom;
+
+    animation:
+        bouquetAppear 2s cubic-bezier(.16,.86,.29,1) forwards;
+}
+
+@keyframes bouquetAppear {
+    0% {
+        opacity: 0;
+        transform:
+            translateY(70px)
+            scale(.55)
+            rotate(-2deg);
+    }
+
+    70% {
+        opacity: 1;
+        transform:
+            translateY(-7px)
+            scale(1.03)
+            rotate(1deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1)
+            rotate(0deg);
+    }
+}
+
+/* =========================================================
+   STEMS
+   ========================================================= */
+
+.stem {
+    position: absolute;
+
+    width: 8px;
+    height: 235px;
+
+    left: 50%;
+    bottom: 5px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #294a37,
+            #55785d,
+            #365c42
+        );
+
+    transform-origin: bottom;
+    box-shadow:
+        inset 2px 0 rgba(255,255,255,.09);
+
+    animation: stemGrow 1.7s cubic-bezier(.2,.8,.2,1) forwards;
+}
+
+.stem-1 { transform: translateX(-50%) rotate(-22deg); }
+.stem-2 { transform: translateX(-50%) rotate(-14deg); }
+.stem-3 { transform: translateX(-50%) rotate(-7deg); }
+.stem-4 { transform: translateX(-50%) rotate(0deg); }
+.stem-5 { transform: translateX(-50%) rotate(8deg); }
+.stem-6 { transform: translateX(-50%) rotate(15deg); }
+.stem-7 { transform: translateX(-50%) rotate(22deg); }
+
+@keyframes stemGrow {
+    from {
+        height: 0;
+    }
+    to {
+        height: 235px;
+    }
+}
+
+/* =========================================================
+   LEAVES
+   ========================================================= */
+
+.leaf {
+    position: absolute;
+
+    width: 54px;
+    height: 27px;
+
+    border-radius: 100% 0 100% 0;
+
+    background:
+        linear-gradient(
+            145deg,
+            #739277,
+            #294936
+        );
+
+    transform-origin: 0 50%;
+
+    opacity: 0;
+
+    animation:
+        leafAppear .9s ease forwards;
+
+    box-shadow:
+        inset 4px 4px 6px rgba(255,255,255,.11);
+}
+
+.leaf-1 {
+    left: 31%;
+    bottom: 103px;
+    transform: rotate(12deg);
+    animation-delay: 1.6s;
+}
+
+.leaf-2 {
+    left: 37%;
+    bottom: 142px;
+    transform: rotate(-19deg) scale(.85);
+    animation-delay: 1.7s;
+}
+
+.leaf-3 {
+    left: 42%;
+    bottom: 84px;
+    transform: rotate(28deg) scale(.9);
+    animation-delay: 1.8s;
+}
+
+.leaf-4 {
+    right: 31%;
+    bottom: 105px;
+    transform: rotate(162deg);
+    animation-delay: 1.6s;
+}
+
+.leaf-5 {
+    right: 37%;
+    bottom: 145px;
+    transform: rotate(198deg) scale(.85);
+    animation-delay: 1.7s;
+}
+
+.leaf-6 {
+    right: 43%;
+    bottom: 84px;
+    transform: rotate(145deg) scale(.9);
+    animation-delay: 1.8s;
+}
+
+@keyframes leafAppear {
+    from {
+        opacity: 0;
+        scale: .2;
+    }
+    to {
+        opacity: .95;
+        scale: 1;
+    }
+}
+
+/* =========================================================
+   ROSES
+   ========================================================= */
+
+.rose {
+    width: 94px;
+    height: 94px;
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    opacity: 0;
+
+    animation:
+        roseBloom 1.4s cubic-bezier(.2,.85,.25,1) forwards;
+
+    filter:
+        drop-shadow(0 9px 14px rgba(0,0,0,.25));
+}
+
+.rose span {
+    position: absolute;
+
+    width: 58px;
+    height: 58px;
+
+    border-radius:
+        62% 38%
+        60% 40% /
+        60% 38%
+        62% 40%;
+
+    background:
+        radial-gradient(
+            circle at 35% 32%,
+            #ffdbe5 0%,
+            #f2a5bd 28%,
+            #bd627f 61%,
+            #803a57 100%
+        );
+
+    left: 18px;
+    top: 18px;
+
+    transform-origin: 50% 65%;
+
+    box-shadow:
+        inset -6px -8px 12px rgba(94,27,52,.2),
+        inset 5px 5px 10px rgba(255,255,255,.17);
+}
+
+.rose span:nth-child(1) {
+    transform: rotate(0deg) translateY(-10px);
+}
+
+.rose span:nth-child(2) {
+    transform: rotate(90deg) translateY(-10px);
+}
+
+.rose span:nth-child(3) {
+    transform: rotate(180deg) translateY(-10px);
+}
+
+.rose span:nth-child(4) {
+    transform: rotate(270deg) translateY(-10px);
+}
+
+.rose i {
+    position: absolute;
+
+    width: 28px;
+    height: 28px;
+
+    left: 33px;
+    top: 33px;
+
+    border-radius: 52% 48% 58% 42%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #ffcedd,
+            #a84768 70%
+        );
+
+    transform:
+        rotate(25deg);
+
+    box-shadow:
+        inset 4px 4px 6px rgba(255,255,255,.14);
+}
+
+@keyframes roseBloom {
+    0% {
+        opacity: 0;
+        transform:
+            scale(.15)
+            rotate(-20deg);
+    }
+
+    65% {
+        opacity: 1;
+        transform:
+            scale(1.08)
+            rotate(4deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform:
+            scale(1)
+            rotate(0deg);
+    }
+}
+
+/* bouquet positions */
+
+.rose-1 {
+    left: 58px;
+    top: 64px;
+    transform: scale(.82);
+    animation-delay: 1.8s;
+}
+
+.rose-2 {
+    left: 105px;
+    top: 25px;
+    transform: scale(.95);
+    animation-delay: 1.95s;
+}
+
+.rose-3 {
+    left: 162px;
+    top: 62px;
+    transform: scale(1.07);
+    animation-delay: 2.1s;
+}
+
+.rose-4 {
+    left: 217px;
+    top: 23px;
+    transform: scale(.96);
+    animation-delay: 2.25s;
+}
+
+.rose-5 {
+    left: 270px;
+    top: 68px;
+    transform: scale(.88);
+    animation-delay: 2.4s;
+}
+
+.rose-6 {
+    left: 125px;
+    top: 111px;
+    transform: scale(.78);
+    animation-delay: 2.5s;
+}
+
+.rose-7 {
+    left: 224px;
+    top: 113px;
+    transform: scale(.78);
+    animation-delay: 2.65s;
+}
+
+/* =========================================================
+   WRAPPING PAPER
+   ========================================================= */
+
+.bouquet-wrap {
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+
+    width: 255px;
+    height: 165px;
+
+    transform:
+        translateX(-50%)
+        perspective(400px)
+        rotateX(7deg);
+
+    clip-path:
+        polygon(
+            7% 0,
+            93% 0,
+            79% 100%,
+            50% 75%,
+            21% 100%
+        );
+
+    background:
+        linear-gradient(
+            145deg,
+            #f0e5f9,
+            #d5c0e9 48%,
+            #b89acb
+        );
+
+    box-shadow:
+        0 22px 35px rgba(0,0,0,.26);
+
+    opacity: 0;
+
+    animation:
+        wrapperAppear 1.2s ease forwards;
+
+    animation-delay: 1.5s;
+}
+
+@keyframes wrapperAppear {
+    from {
+        opacity: 0;
+        transform:
+            translateX(-50%)
+            translateY(35px)
+            scale(.7)
+            rotateX(9deg);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateX(-50%)
+            translateY(0)
+            scale(1)
+            rotateX(7deg);
+    }
+}
+
+/* =========================================================
+   RIBBON
+   ========================================================= */
+
+.ribbon {
+    position: absolute;
+
+    left: 50%;
+    bottom: 45px;
+
+    width: 82px;
+    height: 25px;
+
+    transform:
+        translateX(-50%)
+        rotate(-4deg);
+
+    background:
+        linear-gradient(
+            90deg,
+            #c26d8e,
+            #f0a9be,
+            #bc6282
+        );
+
+    border-radius: 5px;
+
+    box-shadow:
+        0 5px 10px rgba(0,0,0,.15);
+
+    opacity: 0;
+
+    animation:
+        wrapperAppear .8s ease forwards;
+
+    animation-delay: 2.1s;
+}
+
+.ribbon::before,
+.ribbon::after {
+    content: "";
+
+    position: absolute;
+
+    top: 5px;
+
+    width: 48px;
+    height: 35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ca7391,
+            #9f4f70
+        );
+
+    z-index: -1;
+}
+
+.ribbon::before {
+    right: 58px;
+    transform: rotate(20deg);
+}
+
+.ribbon::after {
+    left: 58px;
+    transform: rotate(-20deg);
+}
+
+/* =========================================================
+   OPEN BUTTON
+   ========================================================= */
+
+#openSurprise {
+    margin-top: 34px;
+
+    padding: 15px 23px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+
+    border: 1px solid rgba(255,255,255,.16);
+
+    border-radius: 999px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(170,127,204,.88),
+            rgba(174,87,122,.88)
+        );
+
+    font-family: Manrope, sans-serif;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 15px 38px rgba(0,0,0,.25),
+        0 0 30px rgba(213,173,236,.12);
+
+    opacity: 0;
+
+    animation:
+        introTextIn 1.2s ease forwards,
+        buttonPulse 2.5s ease-in-out infinite;
+
+    animation-delay: 3.9s, 5.5s;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+#openSurprise:hover {
+    transform: translateY(-3px) scale(1.03);
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.30),
+        0 0 42px rgba(213,173,236,.25);
+}
+
+#openSurprise b {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+@keyframes buttonPulse {
+    50% {
+        box-shadow:
+            0 18px 45px rgba(0,0,0,.28),
+            0 0 34px rgba(213,173,236,.23);
+    }
+}
+
+/* =========================================================
+   HINT
+   ========================================================= */
+
+.intro-hint {
+    margin-top: 15px;
+
+    color: rgba(255,255,255,.36);
+
+    font-family: "DM Mono", monospace;
+    font-size: 9px;
+
+    letter-spacing: .08em;
+
+    opacity: 0;
+
+    animation:
+        introTextIn 1.2s ease forwards;
+
+    animation-delay: 4.25s;
+}
+
+/* =========================================================
+   PARTICLES
+   ========================================================= */
+
+.intro-stars {
+    position: absolute;
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+}
+
+.intro-stars::before,
+.intro-stars::after {
+    content: "";
+
+    position: absolute;
+
+    inset: -30%;
+
+    background-image:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.85) 0 1px,
+            transparent 1.5px
+        );
+
+    background-size:
+        95px 95px;
+
+    animation:
+        starsMove 25s linear infinite;
+
+    opacity: .23;
+}
+
+.intro-stars::after {
+    background-size: 145px 145px;
+    animation-duration: 40s;
+    opacity: .12;
+}
+
+@keyframes starsMove {
+    from {
+        transform: translate3d(0,0,0);
+    }
+
+    to {
+        transform: translate3d(-100px,80px,0);
+    }
+}
+
+@keyframes introTextIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .bouquet-stage {
+        width: 340px;
+        height: 330px;
+        transform: scale(.88);
+        margin-top: -10px;
+        margin-bottom: -15px;
+    }
+
+    .intro-title {
+        font-size: 48px;
+    }
+
+    .intro-subtitle {
+        padding: 0 20px;
+        font-size: 18px;
+    }
+
+    .intro-hint {
+        padding: 0 20px;
+    }
+}
+  </style>
+</head>
+
+<body>
+  <!-- ================= BIRTHDAY OPENING ================= -->
+  <div id="birthdayIntro">
+    <div class="intro-stars"></div>
+
+    <div class="intro-content">
+
+      <div class="intro-kicker">a little something from Manan</div>
+
+      <div class="bouquet-stage">
+        <!-- stems -->
+        <div class="stem stem-1"></div>
+        <div class="stem stem-2"></div>
+        <div class="stem stem-3"></div>
+        <div class="stem stem-4"></div>
+        <div class="stem stem-5"></div>
+        <div class="stem stem-6"></div>
+        <div class="stem stem-7"></div>
+
+        <!-- leaves -->
+        <div class="leaf leaf-1"></div>
+        <div class="leaf leaf-2"></div>
+        <div class="leaf leaf-3"></div>
+        <div class="leaf leaf-4"></div>
+        <div class="leaf leaf-5"></div>
+        <div class="leaf leaf-6"></div>
+
+        <!-- roses -->
+        <div class="rose rose-1">
+          <span></span><span></span><span></span><span></span>
+          <i></i>
+        </div>
+
+        <div class="rose rose-2">
+          <span></span><span></span><span></span><span></span>
+          <i></i>
+        </div>
+
+        <div class="rose rose-3">
+          <span></span><span></span><span></span><span></span>
+          <i></i>
+        </div>
+
+        <div class="rose rose-4">
+          <span></span><span></span><span></span><span></span>
+          <i></i>
+        </div>
+
+        <div class="rose rose-5">
+          <span></span><span></span><span></span><span></span>
+          <i></i>
+        </div>
+
+        <div class="rose rose-6">
+          <span></span><span></span><span></span><span></span>
+          <i></i>
+        </div>
+
+        <div class="rose rose-7">
+          <span></span><span></span><span></span><span></span>
+          <i></i>
+        </div>
+
+        <div class="bouquet-wrap"></div>
+        <div class="ribbon"></div>
+      </div>
+
+      <div class="intro-title">
+        For <span>Aastha</span>
+      </div>
+
+      <div class="intro-subtitle">
+        because some people deserve an entire bouquet...
+      </div>
+
+      <button id="openSurprise">
+        <span>Open your surprise</span>
+        <b>♡</b>
+      </button>
+
+      <div class="intro-hint">
+        headphones recommended · there is a song waiting for you
+      </div>
+    </div>
+  </div>
+  <div id="petals"></div>
+  <!-- <nav class="nav"><a href="#home">home</a><a href="#dev">dev</a><a href="#letter">letter</a><a -->
+      <!-- href="memories.html">memories ↗</a><button id="musicBtn">♫ Bairan</button></nav> -->
+
+  <section class="hero" id="home">
+    <div class="hero-card">
+      <div>
+        <div class="kicker">private build // manan → aastha</div>
+        <h1 class="title">Aastha</h1>
+        <div class="script">happy birthday, meri jaan ♡</div>
+        <p class="sub">A tiny universe for the girl with the long dark hair, the little light-brown touch, deep ocean
+          eyes, beautiful lips, and a heart that somehow manages to be soft, ambitious, romantic and delightfully
+          chaotic all at once.</p>
+        <a class="cta" href="#letter">open your little letter ✦</a>
+        <div class="tiny">built with love, a bit of C++, too much CSS, and absolutely no unit tests.</div>
+      </div>
+      <div class="avatar-box">
+        <div class="halo"></div>
+        <div id="avatar"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="dev">
+    <div class="wrap">
+      <div class="tag">terminal / aastha.ai</div>
+      <h2 class="h2">the girl who makes<br>beautiful things from logic.</h2>
+      <div class="terminal">
+        <div class="term-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        <div><span class="prompt">$</span> ./compile_birthday_wishes --for=Aastha</div>
+        <div>loading memories................ <span class="pink">done</span></div>
+        <div>finding reasons to smile...... <span class="pink">infinite</span></div>
+        <div>model: <span class="pink">AI/ML</span> | language: <span class="pink">C++</span></div>
+        <div>personality.status............. <span class="pink">soft · cute · elegant · ambitious</span></div>
+        <div>chaos.module................... <span class="pink">enabled</span></div>
+        <div>coffee_date.protocol........... <span class="pink">“tum coffee pee lena, mai chai lunga”</span></div>
+        <div>first_date..................... <span class="pink">29 June 2025 · Shipra Mall</span></div>
+        <div>future.destination............. <span class="pink">valleys_of_nepal.exe</span></div>
+        <div><span class="prompt">$</span> echo "happy birthday, Aastha ❤️"</div>
+        <div><span class="cursor"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="letter">
+    <div class="wrap">
+      <!-- <div class="tag">the old-fashioned kind</div> -->
+      <h2 class="h2">a letter, because some feelings deserve paper.</h2>
+      <article class="letter">
+        <div class="date">17 SEPTEMBER 2026 · FOR AASTHA</div>
+        <h3>My Aastha,</h3>
+        <p>There are some things I can never explain properly in code. You are one of them.</p>
+        <p>I still remember that college physics lab moment — when I asked you for a coffee date and somehow ended up
+          saying, <em>“tum coffee pee lena, mai chai lunga.”</em> I don't know whether that was smooth, silly, or both…
+          but I know it became one of those tiny moments that I never want to lose.</p>
+        <p>And then came <strong>29th June 2025</strong>, Shipra Mall — our first date. Since then, you have quietly
+          become one of the most beautiful parts of my everyday thoughts.</p>
+        <p>Your long black hair with that soft light-brown touch, your deep eyes that feel like an ocean, your beautiful
+          lips… there are details about you that my mind keeps collecting without even trying.</p>
+        <p>I love your softness, your elegance, your introvert little world, your ambition, your chaotic-funny moments,
+          and your very romantic heart. And yes — even those angry or stressed moments where I start mimicking you and
+          somehow make everything worse before it gets better. <span style="color:#a55f79">😌</span></p>
+        <p>One day, I hope we're somewhere in the valleys of Nepal, looking at mountains together, laughing at old
+          stories, and realizing how many tiny memories it took to reach that view.</p>
+        <p>Today, I just want you to know this: I am proud of the girl you are, excited about the woman you are
+          becoming, and incredibly grateful that our paths crossed.</p>
+        <p>Happy birthday, meri jaan. Keep building brilliant things, keep chasing your dreams, keep being wonderfully
+          you — and let me keep annoying you, loving you, and making memories with you along the way.</p>
+        <div class="signature">Always yours, Manan ♡</div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap" style="text-align:center">
+      <div class="tag">next chapter</div>
+      <h2 class="h2">and now… let's go back through the memories.</h2>
+      <a class="cta" href="memories.html">enter the memory room →</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="heart">♡</div>
+    <div>made for Aastha, by Manan · 17.09.2026</div>
+  </footer>
+
+  <audio
+      id="bgm"
+      loop
+      preload="auto"
+  >
+      <source
+          src="assets/bairan.mp3"
+          type="audio/mpeg"
+      >
+  </audio>
+
+
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+
+  <script type="module">
+    import * as THREE from 'three';
+    import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
+    const pwrap = document.getElementById('petals');
+    for (let i = 0; i < 18; i++) { const p = document.createElement('i'); p.className = 'petal'; p.style.left = Math.random() * 100 + '%'; p.style.animationDelay = (-Math.random() * 10) + 's'; p.style.animationDuration = (8 + Math.random() * 7) + 's'; pwrap.appendChild(p) }
+
+    const host = document.getElementById('avatar');
+    const scene = new THREE.Scene(), camera = new THREE.PerspectiveCamera(34, host.clientWidth / host.clientHeight, .1, 100);
+    camera.position.set(0, .35, 6.2);
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+    renderer.setSize(host.clientWidth, host.clientHeight);
+    renderer.outputColorSpace = THREE.SRGBColorSpace;
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.1;
+    host.appendChild(renderer.domElement);
+
+    scene.add(new THREE.AmbientLight(0xffffff, 1.8));
+    const key = new THREE.DirectionalLight(0xffedf4, 2.5); key.position.set(2, 4, 4); scene.add(key);
+    const rim = new THREE.PointLight(0xcbb4f4, 14, 9); rim.position.set(-3, 1, 2); scene.add(rim);
+
+    const root = new THREE.Group();
+    scene.add(root);
+
+    const modelRoot = new THREE.Group();
+    root.add(modelRoot);
+
+    const loader = new GLTFLoader();
+    let mixer = null;
+
+    loader.load(
+      'models/girlfriend.glb',
+      (gltf) => {
+        const model = gltf.scene;
+
+        const box = new THREE.Box3().setFromObject(model);
+        const size = box.getSize(new THREE.Vector3());
+        const center = box.getCenter(new THREE.Vector3());
+
+        model.position.sub(center);
+
+        const targetHeight = 4.6;
+        const scale = targetHeight / size.y;
+        model.scale.setScalar(scale);
+
+        model.position.y = -0.65;
+
+        model.traverse((object) => {
+          if (object.isMesh) {
+            object.castShadow = false;
+            object.receiveShadow = false;
+
+            if (object.material) {
+              object.material.needsUpdate = true;
+            }
+          }
+        });
+
+        modelRoot.add(model);
+
+        if (gltf.animations && gltf.animations.length) {
+          mixer = new THREE.AnimationMixer(model);
+          gltf.animations.forEach((clip) => {
+            mixer.clipAction(clip).play();
+          });
+        }
+      },
+      undefined,
+      (error) => {
+        console.error('Avatar loading failed:', error);
+      }
+    );
+
+    let t = 0;
+    const clock = new THREE.Clock();
+
+    function animate () {
+      requestAnimationFrame(animate);
+
+      const delta = clock.getDelta();
+      t += .012;
+
+      root.rotation.y = Math.sin(t * .55) * .12;
+      root.position.y = Math.sin(t * 1.1) * .035;
+
+      if (mixer) {
+        mixer.update(delta);
+      }
+
+      renderer.render(scene, camera);
+    }
+
+    animate();
+
+    window.addEventListener('resize', () => {
+      const w = host.clientWidth, h = host.clientHeight;
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+      renderer.setSize(w, h);
+    });
+
+    const audio = document.getElementById('bgm'), btn = document.getElementById('musicBtn');
+    btn.addEventListener('click', () => { if (!audio.getAttribute('src') && !audio.querySelector('source')?.src) return; audio.paused ? audio.play().catch(() => { }) : audio.pause() });
+  </script>
+  <script>
+  /* =========================================================
+    BIRTHDAY INTRO → START MUSIC → ENTER WEBSITE
+    ========================================================= */
+
+  const birthdayIntro = document.getElementById("birthdayIntro");
+  const openSurprise = document.getElementById("openSurprise");
+  const bgm = document.getElementById("bgm");
+
+  let musicStarted = false;
+
+  openSurprise.addEventListener("click", async () => {
+
+      /* ---------------------------------------------
+        Start Bairan after user's interaction
+        --------------------------------------------- */
+
+      try {
+          bgm.volume = 0;
+
+          await bgm.play();
+
+          musicStarted = true;
+
+          /* gentle audio fade-in */
+          let volume = 0;
+
+          const fadeIn = setInterval(() => {
+
+              volume += 0.025;
+
+              if (volume >= 0.65) {
+                  volume = 0.65;
+                  clearInterval(fadeIn);
+              }
+
+              bgm.volume = volume;
+
+          }, 80);
+
+      } catch (error) {
+          console.warn("Music could not start:", error);
+      }
+
+      /* ---------------------------------------------
+        Bouquet exit animation
+        --------------------------------------------- */
+
+      birthdayIntro.style.transition =
+          "opacity 1.6s cubic-bezier(.7,0,.2,1)";
+
+      birthdayIntro.style.opacity = "0";
+
+      setTimeout(() => {
+
+          birthdayIntro.classList.add("hide");
+
+          /* allow scrolling again */
+          document.body.style.overflow = "";
+
+      }, 1500);
+
+  });
+
+  /* Keep website locked while intro is visible */
+  document.body.style.overflow = "hidden";
+  </script>
+</body>
+
+</html>

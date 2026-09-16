@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Our Memories — Aastha & Manan ♡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--lav:#ded2f1;--lav2:#a98acb;--ink:#352b3e;--rose:#a95b79}*{box-sizing:border-box}body{margin:0;color:var(--ink);font-family:Manrope;background:radial-gradient(circle at 20% 10%,#fff,transparent 28%),linear-gradient(135deg,#eee7fa,#fbf5ee);min-height:100vh}.nav{position:fixed;z-index:5;top:16px;left:50%;transform:translateX(-50%);padding:9px 15px;background:#ffffff9c;border:1px solid #fff;backdrop-filter:blur(14px);border-radius:999px}.nav a{font:700 12px Manrope;color:#5c4e70}.wrap{width:min(1180px,94vw);margin:auto;padding:115px 0 80px}.eyebrow{font:500 11px DM Mono;letter-spacing:.18em;text-transform:uppercase;color:#826d9b}.title{font:600 clamp(55px,8vw,100px)/.85 "Cormorant Garamond",serif;margin:12px 0}.intro{max-width:700px;line-height:1.8;color:#6a5f71}.tools{display:flex;gap:10px;flex-wrap:wrap;margin:30px 0}.tool{border:1px solid rgba(129,102,158,.22);background:#ffffffa8;border-radius:999px;padding:12px 16px;color:#5d4f6d;font-weight:800;cursor:pointer}.grid{position:relative;display:grid;grid-template-columns:repeat(12,1fr);gap:18px}.card{grid-column:span 4;background:#fff;padding:10px;border-radius:15px;box-shadow:0 18px 45px rgba(83,61,103,.12);transition:transform .4s,box-shadow .4s}.card:nth-child(3n){transform:rotate(1.8deg)}.card:nth-child(3n+1){transform:rotate(-1.7deg)}.card:nth-child(3n+2){transform:rotate(.7deg)}.card:hover{transform:translateY(-9px) rotate(0deg);box-shadow:0 27px 65px rgba(83,61,103,.2)}.card img{display:block;width:100%;height:290px;object-fit:cover;border-radius:10px}.caption{padding:13px 8px 9px;font:500 11px DM Mono;color:#806c8a}.modal{position:fixed;inset:0;background:#1f182bdb;backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:20px;z-index:20}.modal.open{display:flex}.modal-box{max-width:900px;width:95vw;position:relative}.modal img{width:100%;max-height:82vh;object-fit:contain;border-radius:10px}.close{position:absolute;right:0;top:-42px;background:#ffffff22;border:1px solid #ffffff38;color:#fff;border-radius:999px;padding:9px 13px;cursor:pointer}
+@media(max-width:800px){.card{grid-column:span 6}}@media(max-width:520px){.card{grid-column:span 12}}
+</style></head>
+<body><div class="nav"><a href="index.html">← back to Aastha's universe</a></div>
+<main class="wrap"><div class="eyebrow">memory room // random access</div><h1 class="title">our little universe.</h1><p class="intro">These moments never liked standing in a straight line. So every time you open this room, they shuffle into a slightly different constellation.</p>
+<div class="tools"><button class="tool" id="shuffle">↻ shuffle memories</button><button class="tool" id="surprise">✦ surprise me</button></div><div class="grid" id="grid"></div></main>
+<div class="modal" id="modal"><div class="modal-box"><button class="close" id="close">close ×</button><img id="modalImg" alt="memory"></div></div>
+<script>
+const files=Array.from({length:21},(_,i)=>`assets/memory-${String(i+1).padStart(2,'0')}.jpeg`);
+const captions=["just us ♡","one of those little moments","your smile, my favorite view","still my favorite kind of chaos","a memory worth keeping","the two of us","you, being you","another page in our story","soft days","my person","somewhere between laughter and love","you make ordinary days pretty","our tiny universe","forever a little silly","this one feels like home","memories I replay","happy looks good on you","us, in another frame","one more for the collection","the smile I never get tired of","always you"];
+const grid=document.getElementById('grid'),modal=document.getElementById('modal'),modalImg=document.getElementById('modalImg');
+function shuffle(a){for(let i=a.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+let order=shuffle([...Array(files.length).keys()]);
+function render(){grid.innerHTML='';order.forEach((idx,pos)=>{const c=document.createElement('article');c.className='card';c.innerHTML=`<img loading="lazy" src="${files[idx]}" alt="Memory ${idx+1}"><div class="caption">${captions[idx]}</div>`;c.addEventListener('click',()=>{modal.classList.add('open');modalImg.src=files[idx]});grid.appendChild(c)})}
+document.getElementById('shuffle').onclick=()=>{order=shuffle(order);render()}
+document.getElementById('surprise').onclick=()=>{const idx=order[Math.floor(Math.random()*order.length)];modal.classList.add('open');modalImg.src=files[idx]}
+document.getElementById('close').onclick=()=>modal.classList.remove('open');modal.onclick=e=>{if(e.target===modal)modal.classList.remove('open')};
+render();
+</script></body></html>
